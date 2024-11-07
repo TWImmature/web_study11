@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>宝藏寻找之旅</title>
+    <script src="treasure.js"></script>
+    <style>
+        /* 设置初始背景图片，并确保自适应 */
+        body, html {
+            height: 100%;
+            margin: 0;
+        }
+        body {
+            background-image: url('jpgs/Library.jpg');
+            background-size: cover; /* 覆盖整个屏幕，保持宽高比 */
+            background-repeat: no-repeat;
+            background-position: center;
+            background-attachment: fixed; /* 防止滚动时背景图片移动 */
+        }
+        /* 添加用于显示事件文本的样式 */
+        #eventLog {
+            margin-top: 20px;
+            padding: 10px;
+            border: 1px solid #333;
+            background-color: rgba(255, 255, 255, 0.8);
+            color: #000;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+    </style>
+</head>
+<body>
+<h1>开始你的宝藏寻找之旅</h1>
+<button id="startTreasureHunt">开始寻找宝藏</button>
+<div id="eventLog"></div>
+<script>
+    // 页面加载完毕后，绑定按钮点击事件
+    document.getElementById('startTreasureHunt').addEventListener('click', function() {
+        findTreasureWithAsyncAwait(); // 当按钮被点击时执行
+    });
+</script>
+</body>
+</html>
